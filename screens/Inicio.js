@@ -17,8 +17,7 @@ export default function App() {
         <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Login')}>
   <Text style={styles.buttonText}>Log In</Text>
 </TouchableOpacity>
-
-      </View>
+    </View>
       <StatusBar style="auto" />  
       {/* puede ser dark, ligth o auto */}
     </View>

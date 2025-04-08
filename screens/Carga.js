@@ -1,6 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { View, Image, Text, TouchableOpacity, StyleSheet } from 'react-native';
-
+import { StyleSheet, Text, View, Image } from 'react-native';
 
 const icon = require('./assets/logo.png');
 const LoadingIcon = require('./assets/carga.png');
@@ -19,8 +18,16 @@ export default function App() {
 </TouchableOpacity>
 
       </View>
-      <StatusBar style="auto" />  
-      {/* puede ser dark, ligth o auto */}
+
+      {/* Logo de carga abajo */}
+      <View style={styles.bottomContent}>
+        <Image
+          source={LoadingIcon}
+          style={{ width: 150, height: 80, resizeMode: 'contain' }}
+        />
+      </View>
+
+      <StatusBar style="auto" />
     </View>
   );
 }
@@ -42,19 +49,4 @@ const styles = StyleSheet.create({
     bottom: 40, // separarlo del borde inferior
     alignItems: 'center',
   },
-  button: {
-    backgroundColor: '#000', // Negro
-    paddingVertical: 14,
-    paddingHorizontal: 40,
-    borderRadius: 30, // Bordes bien redondeados
-    marginTop: 20,
-    alignItems: 'center',
-  },
-  
-  buttonText: {
-    color: '#fff', // Blanco
-    fontSize: 18,
-    fontWeight: 'bold',
-  },
-  
 });

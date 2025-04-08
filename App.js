@@ -1,10 +1,28 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Image } from 'react-native';
+
+const icon = require('./assets/logo.png');
+const LoadingIcon = require('./assets/carga.png');
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+      {/* Logo centrado */}
+      <View style={styles.centeredContent}>
+        <Image
+          source={icon}
+          style={{ width: 400, height: 100, resizeMode: 'contain' }}
+        />
+      </View>
+
+      {/* Logo de carga abajo */}
+      <View style={styles.bottomContent}>
+        <Image
+          source={LoadingIcon}
+          style={{ width: 150, height: 80, resizeMode: 'contain' }}
+        />
+      </View>
+
       <StatusBar style="auto" />
     </View>
   );
@@ -13,8 +31,18 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#8FAD50',
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  centeredContent: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  bottomContent: {
+    position: 'absolute',
+    bottom: 40, // separarlo del borde inferior
+    alignItems: 'center',
   },
 });

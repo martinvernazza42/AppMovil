@@ -1,12 +1,6 @@
-import { View, Text } from 'react-native'
-import React from 'react'
+// app/index.tsx
+import { Redirect } from 'expo-router';
 
-const Auth = () => {
-  return (
-    <View>
-      <Text>Auth</Text>
-    </View>
-  )
+export default function App() {
+  return <Redirect href="/(main)" />; // <-- ¡SOLUCIÓN: Añade los paréntesis!
 }
-
-export default Auth

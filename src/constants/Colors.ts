@@ -8,4 +8,5 @@ export const Colors = {
   gray: '#F5F5F5', // Gris claro para el fondo principal
   darkGray: '#EEEEEE',
   shadowColor: 'rgba(0,0,0,0.1)',
-};
+  // src/constants/Colors.ts
+}
